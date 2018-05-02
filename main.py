@@ -10,7 +10,7 @@ def hello():
 
 @app.route("/ask", methods=['POST'])
 def ask():
-	message = request.form['messageText'].encode('utf-8').strip()
+	message = str(request.form['messageText'])
 
 	kernel = aiml.Kernel()
 
